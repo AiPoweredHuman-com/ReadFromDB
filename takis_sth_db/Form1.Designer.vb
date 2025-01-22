@@ -27,9 +27,11 @@ Partial Class Form1
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.UName = New System.Windows.Forms.TextBox()
+        Me.Passwrd = New System.Windows.Forms.TextBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1
@@ -38,7 +40,7 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(136, 83)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Connect to DB"
+        Me.Button1.Text = "Connect" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " to DB"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -47,7 +49,7 @@ Partial Class Form1
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(136, 83)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Connect to DB"
+        Me.Button2.Text = "Close Connection"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
@@ -56,7 +58,7 @@ Partial Class Form1
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(136, 83)
         Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Connect to DB"
+        Me.Button3.Text = "Fetch Data"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
@@ -65,7 +67,7 @@ Partial Class Form1
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(136, 83)
         Me.Button4.TabIndex = 2
-        Me.Button4.Text = "Connect to DB"
+        Me.Button4.Text = "Write Data"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
@@ -74,38 +76,59 @@ Partial Class Form1
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(136, 83)
         Me.Button5.TabIndex = 5
-        Me.Button5.Text = "Connect to DB"
+        Me.Button5.Text = "Read ALL Data"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'UName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(78, 309)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(223, 20)
-        Me.TextBox1.TabIndex = 6
+        Me.UName.Location = New System.Drawing.Point(408, 335)
+        Me.UName.Name = "UName"
+        Me.UName.Size = New System.Drawing.Size(223, 20)
+        Me.UName.TabIndex = 7
         '
-        'TextBox2
+        'Passwrd
         '
-        Me.TextBox2.Location = New System.Drawing.Point(408, 309)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(223, 20)
-        Me.TextBox2.TabIndex = 7
+        Me.Passwrd.Location = New System.Drawing.Point(408, 386)
+        Me.Passwrd.Name = "Passwrd"
+        Me.Passwrd.Size = New System.Drawing.Size(223, 20)
+        Me.Passwrd.TabIndex = 8
         '
-        'TextBox3
+        'ListBox1
         '
-        Me.TextBox3.Location = New System.Drawing.Point(408, 386)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(223, 20)
-        Me.TextBox3.TabIndex = 8
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(78, 335)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(223, 95)
+        Me.ListBox1.TabIndex = 9
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(408, 323)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Username"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(408, 370)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(53, 13)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "Password"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.Passwrd)
+        Me.Controls.Add(Me.UName)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button4)
@@ -123,7 +146,9 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents UName As TextBox
+    Friend WithEvents Passwrd As TextBox
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
